@@ -1,0 +1,201 @@
+/* Importa a fonte "Poppins" do Google Fonts com diferentes pesos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+/* Define estilos para todos os elementos */
+* {
+    font-family: "Poppins", sans-serif; /* Define a fonte padrão para todos os elementos */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Define a caixa de modelagem de borda para incluir o preenchimento e a borda no tamanho total */
+}
+
+/* Estilos para o corpo da página */
+body{
+    display: flex; /* Define o corpo como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    justify-content: center; /* Alinha os itens ao centro horizontalmente */
+    width: 100%; /* Define a largura do corpo como 100% da janela de visualização */
+    height: 100%; /* Define a altura do corpo como 100% da janela de visualização */
+    background-color: #101011; /* Define a cor de fundo do corpo */
+}
+
+/* Estilos para o contêiner principal */
+#container{
+    display: flex; /* Define o contêiner como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 1.5rem; /* Define o espaçamento entre os itens do contêiner */
+}
+
+/* Estilos para a imagem */
+#img{
+    width: 28rem; /* Define a largura da imagem */
+    margin-top: 10rem; /* Define a margem superior da imagem */
+}
+
+/* Estilos para a seção da calculadora */
+#calculator{
+    display: flex; /* Define a seção da calculadora como um contêiner flexível */
+    flex-direction: column; /* Define a direção do fluxo dos elementos como coluna */
+    gap:2rem; /* Define o espaçamento entre os elementos */
+    padding:2rem ; /* Define o preenchimento interno */
+    color: #f8fafc; /* Define a cor do texto */
+    background-color: #262626; /* Define a cor de fundo */
+    border-radius: 8px; /* Define o raio da borda */
+    margin-top: 7rem; /* Define a margem superior */
+}
+
+/* Estilos para o formulário */
+#form {
+   display: flex; /* Define o formulário como um contêiner flexível */
+   flex-direction: column; /* Define a direção do fluxo dos elementos como coluna */
+   gap: 1rem; /* Define o espaçamento entre os elementos */
+}
+
+/* Estilos para o título da calculadora */
+#title{
+    font-size: 2.25rem; /* Define o tamanho da fonte */
+    position: relative; /* Define a posição como relativa */
+    box-shadow: #8f3a08; /* Define a sombra da caixa */
+}
+
+/* Estilos para o sublinhado do título */
+#title::after{
+    position: absolute; /* Define a posição como absoluta */
+    content:''; /* Adiciona um conteúdo vazio */
+    background-color:#c75512; /* Define a cor de fundo */
+    width: 8rem; /* Define a largura */
+    height: 3px ; /* Define a altura */
+    bottom: 0; /* Define a distância do fundo */
+    left: 0; /* Define a distância da esquerda */
+    border-radius: 3px; /* Define o raio da borda */
+    box-shadow: #8f3a08; /* Define a sombra da caixa */
+}
+
+/* Estilos para a etiqueta de entrada */
+.input-box label {
+    font-size: 1.1rem; /* Define o tamanho da fonte */
+    color:#cdb5e1; /* Define a cor do texto */
+    font-weight: 500; /* Define o peso da fonte */
+}
+
+/* Estilos para o campo de entrada */
+.input-field{
+    display: flex; /* Define o campo de entrada como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    background-color: #3f3f46; /* Define a cor de fundo */
+    padding: 0.3rem; /* Define o preenchimento */
+    border-radius: 3px; /* Define o raio da borda */
+    margin-top: 3px; /* Define a margem superior */
+}
+
+/* Estilos para o texto e o ícone no campo de entrada */
+.input-field span,
+.input-field i{
+    color: #cdb5e1; /* Define a cor do texto */
+    font-size: 1.3rem; /* Define o tamanho da fonte */
+    padding: 0.6rem 1rem; /* Define o preenchimento */
+}
+
+/* Estilos para o campo de entrada */
+.input-field input{
+    background-color: transparent; /* Define a cor de fundo transparente */
+    border: none; /* Remove a borda */
+    width: 100%; /* Define a largura */
+    font-size: 1.3rem; /* Define o tamanho da fonte */
+    color: #f8fafc; /* Define a cor do texto */
+    padding: 0.05rem; /* Define o preenchimento */
+}
+
+/* Remove os botões de aumento e diminuição nos campos de entrada numéricos */
+.input-field input::-webkit-outer-spin-button
+.input-field input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+/* Remove o destaque ao focar no campo de entrada */
+.input-field input:focus{
+    outline: none;
+}
+
+/* Estilos para o botão de calcular */
+#calculate{
+    border: none; /* Remove a borda */
+    font-size:  1.25em;; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o peso da fonte */
+    background-color: #c75512; /* Define a cor de fundo */
+    color: #f8fafc; /* Define a cor do texto */
+    padding: 0.5rem 0; /* Define o preenchimento */
+    border-radius: 3px; /* Define o raio da borda */
+    cursor: pointer; /* Define o cursor como apontador */
+}
+
+/* Estilos para o resultado do IMC */
+#result{
+    display: flex; /* Define o resultado como um contêiner flexível */
+    gap:2rem; /* Define o espaçamento entre os elementos */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    border-top: 1px solid #ffffff34; /* Define a borda superior */
+    padding: 0.75rem 0; /* Define o preenchimento */
+}
+
+#bmi {
+    display: flex; /* Define a seção como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    flex-direction: column; /* Define a direção do fluxo dos elementos como coluna */
+    font-size: 2.25rem; /* Define o tamanho da fonte */
+}
+
+/* Estilos para o último span dentro da seção do IMC */
+#bmi span:last-child {
+    font-size: 0.875rem; /* Define o tamanho da fonte */
+    color: #cbd5e1; /* Define a cor do texto */
+}
+
+/* Estilos para a descrição */
+#description{
+    width: 15.5rem; /* Define a largura */
+}
+
+/* Estilos para mais informações */
+#more_info{
+    border-top: 1px solid #ffffff34; /* Define a borda superior */
+    padding: 1.5rem; /* Define o preenchimento */
+}
+
+/* Estilos para os links de mais informações */
+#more_info a{
+    color: #c75512; /* Define a cor do texto */
+    display: flex; /* Define os links como contêineres flexíveis */
+    justify-content: center; /* Alinha os links ao centro horizontalmente */
+    align-items: center; /* Alinha os links ao centro verticalmente */
+    gap: 0.6rem; /* Define o espaçamento entre os elementos */
+    font-size: 0.875rem; /* Define o tamanho da fonte */
+    text-decoration: none; /* Remove a decoração de texto */
+    transition: color 0.5s; /* Adiciona uma transição suave de cor */
+}
+
+/* Estilos para os links de mais informações ao passar o mouse */
+#more_info a:hover{
+    color: #cbd5e1; /* Define a cor do texto ao passar o mouse */
+}
+
+/* Estilos para elementos ocultos */
+.hidden {
+    display: none; /* Define os elementos como ocultos */
+}
+
+/* Estilos para texto normal */
+.normal{
+    color: #12c7a0; /* Define a cor do texto */
+}
+
+/* Estilos para texto de atenção */
+.attention{
+    color: #c71212; /* Define a cor do texto */
+}
+
+/* Estilos para texto abaixo do normal */
+.abaixo{
+    color: #dbf300; /* Define a cor do texto */
+}
